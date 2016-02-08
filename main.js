@@ -36,16 +36,22 @@ function whatname(x){
 var poolgames = [["9-ball", "8-ball"], ["straight pool", "cut-throat"]]
 console.log(poolgames[1][0]);
 
-
+var paCities = ["Warren", "Washington", "Wilkes-Barre", "Williamsport", "York"];
+var shortCities = [];
 function checkCities(){
-  var paCities = ["Warren", "Washington", "Wilkes-Barre", "Williamsport", "York"];
-  var shortCities = [];
-  for (var i = 0; i <= paCities.length; i++){
+
+  for (var i = 0; i < paCities.length; i++){
     var city = paCities[i];
     if (city.length < 8) {
       shortCities.push(paCities[i]);
     }
   }
-  console.log(shortCities);
+   console.log(shortCities);
+   return shortCities.join();
+}
+
+function printCity(x){
+  console.log(x);
+
 }
 
