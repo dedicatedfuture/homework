@@ -66,3 +66,4 @@ function prizeDoor(x) {
   }
 }
 
+console.log("function calls with amount of arguments: add(1, 2), subtract(1,2), multiply(1,2), check(1), kissass(),  whatname(1), checkCities(), printCity(x), prizeDoor(x)");
