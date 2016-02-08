@@ -54,4 +54,15 @@ function printCity(x){
   console.log(x);
 
 }
+function prizeDoor(x) {
+  if (x === 1){
+    alert("You win a brand new CAR!");
+  } else if (x === 2){
+    alert("You win a free trip to Jamaica!!");
+  }else if (x === 3) {
+    alert("You win a day of hard labor in the salt mines!")
+  }else {
+    alert("That is not a prize door, you win NOTHING")
+  }
+}
 
