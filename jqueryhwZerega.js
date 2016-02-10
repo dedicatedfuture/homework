@@ -35,6 +35,14 @@ $( "#div9" ).click(function() {
     borderWidth: "10px"
   }, 2500 );
 });
+$("#div7").click(function(){
+  grabEvent("div7");
+  console.log("div7 is firing")
+});
+$("#div8").click(function(){
+  grabEvent("div8");
+
+});
 
 
 
@@ -44,15 +52,26 @@ $( "#div9" ).click(function() {
   });
 
   $("#div11").click(function(){
-    $("div10").slideDown("slow",function(){});
+    $("#div10").slideDown();
     console.log("showing back div10")
   });
 
-  $("div5").hover(function(){
-    $(this).addClass("hover");
+  $("#div6").hover(function(){
+    $(this).addClass("redder");
   }, function(){
-    $(this).removeClass("hover");
+    $(this).removeClass("redder");
   })
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
