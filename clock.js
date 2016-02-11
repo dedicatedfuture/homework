@@ -15,9 +15,7 @@ function checkTime(i){
   return i;
 }
 
-function checkMinute(){
 
-}
 
 // 1. change the color to black if it is an odd minute another color if it is //
 //even minute
@@ -27,7 +25,8 @@ function checkMinute(){
 
 $(document).ready(function(){
   var currentHour = 0;
-  var counter = 0;
+  var currentFive = 0;
+
   var cssColor = ['red', 'blue', 'yellow', 'green', 'orange', 'pink', 'purple', 'lightblue', 'lightgreen', 'brown', 'gray']
   var randomNum2 = Math.floor(Math.random()* (10 - 0)) + 0;
 
@@ -46,7 +45,7 @@ $(document).ready(function(){
      $("#milliseconds").text(milliseconds);
 
      ifMinOdd(minutes);
-     setInterval(ifFiveMin(minutes), 300000);
+     ifFiveMin(minutes);
      ifHour(hours);
   }
 
@@ -67,7 +66,13 @@ $(document).ready(function(){
   }
 
   function ifFiveMin(min){
-     $('#timeContainer').css('background-color', cssColor[randomNum2]);
+    if(min > currentFive){
+       $('#timeContainer').css('background-color', cssColor[randomNum2]);
+       currentFive = min + 4;
+       if(currentFive >= 60){
+        currentFive = 0;
+       }
+     }
   }
 
   function ifHour(newHour){

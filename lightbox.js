@@ -4,7 +4,7 @@ $(document).ready(function(){
 
         var link_element = $(e.currentTarget);
         var imageURL = link_element.data('img');
-        var image = $('.lightbox-image');
+        var image = $('#lightbox-image');
         image.attr('src', imageURL);
         centerImage(image);
 
@@ -24,9 +24,10 @@ $(document).ready(function(){
 })
 
 function centerImage(image){
+  console.log("centerImage is firing")
   image.load(function(){
     var pageHeight = $(window).height();
-    var imageHeight = image.height;
+    var imageHeight = image.height();
     var imageOffset = (pageHeight - imageHeight) / 2;
     $('.lightbox-inner').css("margin-top", imageOffset);
 
